@@ -1,7 +1,10 @@
 name: AI code review
 
 # Claude reviews every pull request and leaves inline comments where a change
-# is needed, plus one summary comment. Requires the ANTHROPIC_API_KEY secret.
+# is needed, plus one summary comment. Uses a Claude Pro/Max subscription:
+# create a token with `claude setup-token` and save it as the
+# CLAUDE_CODE_OAUTH_TOKEN repository secret. Reviews count toward that
+# subscription's usage limits.
 on:
   pull_request:
     types: [opened, synchronize, ready_for_review, reopened]
@@ -23,7 +26,7 @@ jobs:
 
       - uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           track_progress: true
           prompt: |
             REPO: ${{ github.repository }}
