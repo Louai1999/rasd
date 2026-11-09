@@ -10,8 +10,8 @@ The split is **50/50 by size**: every task has points (1 = a few hours,
 
 | Person | Who | Leans towards |
 |---|---|---|
-| A | Louai | Backend logic, the LangGraph agent, AI steps |
-| B | Teammate | Infrastructure, integrations, screens |
+| A | Louai (@Louai1999) | Backend logic, the LangGraph agent, AI steps |
+| B | @rahafsk | Infrastructure, integrations, screens |
 
 Both people touch every layer across the rounds: the database, AI, integrations
 and UI. Neither ends up with only "easy" or only "hard" work.
