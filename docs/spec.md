@@ -25,8 +25,15 @@ control of anything that leaves the company.
 
 ## Services and required documents
 
-See `REQUIRED_DOCUMENTS` in `app/domain.py`. Insurer-specific extras come from
-the RAG knowledge base.
+| Service | Customer documents |
+|---|---|
+| Ownership transfer | Vehicle registration, new owner's ID card, new owner's driving licence |
+| UAE extension | None beyond the policy on file |
+| Policy extension | Vehicle registration, driving licence |
+| Add a driver | Driver's ID card, driver's driving licence |
+| Cancellation and refund | Reason, plus proof of sale if sold |
+
+Insurer-specific extras come from the RAG knowledge base.
 
 ## Insurer channels
 
@@ -37,9 +44,15 @@ the RAG knowledge base.
 
 ## Timing (per service, editable)
 
-See `DEFAULT_POLICIES` in `app/services/reminders.py`. Example: ownership
-transfer is polled every 20 minutes, the insurer is reminded after 24 hours,
-up to 3 reminders, and the ticket is escalated after 3 days.
+| Service | Poll | Remind insurer after | Max reminders | Remind customer after | Escalate after |
+|---|---|---|---|---|---|
+| Ownership transfer | 20 min | 24 h | 3 | 24 h | 3 days |
+| UAE extension | 30 min | 4 h | 3 | 6 h | 12 h |
+| Policy extension | 60 min | 24 h | 2 | 24 h | 48 h |
+| Add a driver | 60 min | 24 h | 2 | 24 h | 48 h |
+| Cancellation and refund | 2 h | 48 h | 2 | 48 h | 5 days |
+
+Example defaults; staff edit them from the settings screen.
 
 ## Ticket states
 

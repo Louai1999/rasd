@@ -1,6 +1,6 @@
 ## What this changes
 
-<!-- One or two sentences. Link the issue: Closes #12 -->
+<!-- One or two sentences. Name the round issue: Part of #3 -->
 
 ## How I tested it
 

@@ -19,10 +19,10 @@ Record each significant prompt here, newest first.
 
 ### 2026-11-09 · Louai · setup
 **Tool:** Claude Code
-**Prompt:** Set up the repo with a project skeleton, tests that run on every
-push, an AI reviewer that comments on pull requests, and a 50/50 work split.
-**Result:** Skeleton with domain types, document validation rules, reminder
-rules, the first half of the ticket graph with the staff approval gate, 19
-tests, CI, the AI review workflow and `docs/WORK_SPLIT.md`.
-**What we changed and why:** (fill in)
-**Lesson:** (fill in)
+**Prompt:** Set up the repo with CI on every push, an AI reviewer that
+comments on pull requests, and a build plan in rounds split 50/50 between two
+people, one GitHub issue per round.
+**Result:** CI and AI review workflows, spec, roadmap and nine round issues.
+**What we changed and why:** The AI first wrote starter code. We removed it so
+we build every part ourselves, round by round.
+**Lesson:** Say up front whether you want code or only a plan.

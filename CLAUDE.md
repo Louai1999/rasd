@@ -1,7 +1,8 @@
 # Rasd
 
 AI agent for after-sales motor insurance service tickets in Oman. Read
-`docs/spec.md` for the full picture and `docs/WORK_SPLIT.md` for who owns what.
+`docs/spec.md` for the full picture and `docs/ROADMAP.md` for the build rounds.
+Each round is a GitHub issue that says who does what.
 
 ## Rules that must never break
 
@@ -9,13 +10,16 @@ AI agent for after-sales motor insurance service tickets in Oman. Read
 - No payment link reaches a customer without the second approval (gate 2).
 - No secrets or real customer data in code; use `.env` (see `.env.example`).
 
-## Layout
+## Planned layout
 
 - `app/domain.py`: service types, ticket states, required documents
+- `app/db/`: models and migrations
 - `app/graph/`: the LangGraph ticket graph and its nodes
-- `app/services/`: pure business rules (documents, reminders); keep them I/O-free
-- `app/integrations/channels.py`: the `InsurerChannel` contract; email and portal implement it
+- `app/services/`: pure business rules (documents, reminders, prices); keep them I/O-free
+- `app/integrations/`: the `InsurerChannel` contract, plus email and portal channels
+- `app/workflows/`: Temporal workflows
 - `app/api/`: FastAPI
+- `ui/`: staff screens and dashboard
 - `tests/`: pytest; every new behaviour gets a test
 
 ## Commands
@@ -31,3 +35,4 @@ ruff format .
 - Python 3.12, type hints everywhere, line length 100.
 - Graph state holds plain dicts and strings so the checkpointer can store it.
 - Inject time (`today_fn`, `now`) instead of calling the clock inside logic.
+- LLM calls are mocked in tests so CI never needs an API key.

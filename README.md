@@ -13,24 +13,15 @@ to the insurer, and before a payment link goes to the customer.
 
 LangGraph · Temporal · OCR · RAG (pgvector) · Playwright · FastAPI · PostgreSQL
 
-## Quick start
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt -r requirements-dev.txt
-pytest -q
-uvicorn app.api.main:app --reload
-```
-
 ## Project docs
 
+- [Vision (PDF)](docs/Rasd-vision.pdf)
 - [Specification](docs/spec.md)
-- [Work split](docs/WORK_SPLIT.md)
+- [Roadmap: build rounds](docs/ROADMAP.md)
 - [How we work](CONTRIBUTING.md)
 - [AI development log](docs/ai-dev-log.md)
 
 ## Status
 
-Early prototype. Insurers, portals and payments are simulated, and all
-customer data is fictional.
+Planning done; building starts with Round 1. Insurers, portals and payments
+will be simulated, and all customer data is fictional.
