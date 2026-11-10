@@ -10,17 +10,20 @@ Each round is a GitHub issue that says who does what.
 - No payment link reaches a customer without the second approval (gate 2).
 - No secrets or real customer data in code; use `.env` (see `.env.example`).
 
-## Planned layout
+## Layout
 
-- `app/domain.py`: service types, ticket states, required documents
-- `app/db/`: models and migrations
+See `docs/STRUCTURE.md` for every file, its owner and its round. Each
+placeholder module's docstring says what to build there.
+
+- `app/domain.py`: service types, ticket states, document types
+- `app/db/models/`: `core.py` (Person A) and `settings.py` (Person B)
 - `app/graph/`: the LangGraph ticket graph and its nodes
-- `app/services/`: pure business rules (documents, reminders, prices); keep them I/O-free
-- `app/integrations/`: the `InsurerChannel` contract, plus email and portal channels
+- `app/services/`: business logic; rule modules stay I/O-free
+- `app/integrations/`: the `InsurerChannel` interface, email, portal, payments
 - `app/workflows/`: Temporal workflows
-- `app/api/`: FastAPI
+- `app/api/`: FastAPI app and routes
 - `ui/`: staff screens and dashboard
-- `tests/`: pytest; every new behaviour gets a test
+- `tests/unit` and `tests/integration`: every new behaviour gets a test
 
 ## Commands
 

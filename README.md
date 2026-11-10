@@ -18,6 +18,8 @@ LangGraph · Temporal · OCR · RAG (pgvector) · Playwright · FastAPI · Postg
 - [Vision (PDF)](docs/Rasd-vision.pdf)
 - [Specification](docs/spec.md)
 - [Roadmap: build rounds](docs/ROADMAP.md)
+- [Database design (ERD)](docs/erd.md)
+- [Project structure](docs/STRUCTURE.md)
 - [How we work](CONTRIBUTING.md)
 - [AI development log](docs/ai-dev-log.md)
 
