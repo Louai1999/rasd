@@ -9,7 +9,7 @@
 4. Push and open a pull request: `git push -u origin HEAD`, then `gh pr create`
 5. Wait for **CI**: it runs lint and all tests on every push. It must be green.
 6. Ask for an **AI review** (see below), fix what it finds, and push again.
-7. Your teammate reviews and approves. Then merge.
+7. **@Louai1999 reviews and approves** every pull request (see Code review below). Then merge.
 
 ## AI review in Claude Code
 
@@ -23,7 +23,17 @@ subscription, so no API key or token is needed. Whoever opens the pull
 request asks for the review.
 
 `main` is protected: nobody pushes to it directly, and a pull request needs a
-green CI and one approval before it can be merged.
+green CI and an approval from the code owner before it can be merged.
+
+## Code review
+
+@Louai1999 is the code owner (see `.github/CODEOWNERS`) and reviews every
+pull request. GitHub requests the review automatically when a PR opens.
+
+- **@rahafsk's pull requests** need @Louai1999's approval to merge.
+- **@Louai1999's own pull requests:** GitHub does not let anyone approve their
+  own PR, so after CI is green and the AI review is done, @Louai1999 merges
+  them as the repository admin.
 
 ## Setup
 

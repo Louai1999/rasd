@@ -73,6 +73,8 @@ rasd/
 
 `docker-compose.yml` is not here yet: it is Person B's first task in Round 1.
 
+`.github/CODEOWNERS` makes @Louai1999 the reviewer of every pull request.
+
 ## Why the split rarely collides
 
 - Database models are two files: `core.py` (A) and `settings.py` (B).
