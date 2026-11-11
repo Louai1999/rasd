@@ -14,20 +14,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.12"
-          cache: pip
+          enable-cache: true
 
       - name: Install dependencies
-        run: pip install -r requirements.txt -r requirements-dev.txt
+        # --locked fails if uv.lock is out of date with pyproject.toml.
+        run: uv sync --locked
 
       - name: Lint
-        run: ruff check .
+        run: uv run ruff check .
 
       - name: Check formatting
-        run: ruff format --check .
+        run: uv run ruff format --check .
 
       - name: Run tests
         # Exit code 5 means "no tests collected yet", which is fine before Round 1.
-        run: pytest -q || [ $? -eq 5 ]
+        run: uv run pytest -q || [ $? -eq 5 ]

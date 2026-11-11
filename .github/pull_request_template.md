@@ -4,8 +4,9 @@
 
 ## How I tested it
 
-- [ ] `pytest` passes locally
-- [ ] `ruff check .` and `ruff format --check .` pass
+- [ ] `uv run pytest -q` passes locally
+- [ ] `uv run ruff check .` and `uv run ruff format --check .` pass
+- [ ] If I added a library, I used `uv add` and committed `uv.lock`
 - [ ] Added or updated tests for the new behaviour
 - [ ] Asked Claude Code to review this PR and fixed what it found
 

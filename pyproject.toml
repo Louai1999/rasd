@@ -1,8 +1,27 @@
 [project]
 name = "rasd"
 version = "0.1.0"
-description = "AI agent for after-sales insurance service tickets"
+description = "AI agent for after-sales motor insurance service tickets"
+readme = "README.md"
 requires-python = ">=3.12"
+# Add a library with `uv add <name>`; never edit versions by hand.
+dependencies = [
+    "fastapi>=0.115",
+    "langgraph>=0.6",
+    "uvicorn>=0.30",
+]
+
+[dependency-groups]
+# Installed by `uv sync`; add with `uv add --dev <name>`.
+dev = [
+    "httpx>=0.27",
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[tool.uv]
+# Rasd is an application, not a library to publish.
+package = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
