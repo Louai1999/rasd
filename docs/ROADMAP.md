@@ -35,8 +35,8 @@ and UI. Neither ends up with only "easy" or only "hard" work.
 - **Agree first, then build:** each round names one thing both people must agree
   on before coding (a schema, an interface, a data format). Write it down in the
   issue as a comment.
-- Every pull request needs a green CI, an AI review in Claude Code (see
-  `CONTRIBUTING.md`), and one approval from the other person.
+- Every pull request needs a green CI, an AI review in Claude Code, and a
+  review from @Louai1999, who reviews all code (see `CONTRIBUTING.md`).
 - Tick the task boxes in the issue as you finish. Close the issue when every
   "Done when" box is ticked.
 - To change the split, comment on the issue so both of you agree.

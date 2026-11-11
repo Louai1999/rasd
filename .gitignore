@@ -10,3 +10,7 @@ venv/
 .vscode/
 data/
 *.sqlite3
+
+# Personal AI assistant instructions, kept local only
+CLAUDE.md
+.cursor/rules/

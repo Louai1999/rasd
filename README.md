@@ -11,13 +11,24 @@ to the insurer, and before a payment link goes to the customer.
 
 ## Stack
 
-LangGraph · Temporal · OCR · RAG (pgvector) · Playwright · FastAPI · PostgreSQL
+LangGraph · Temporal · OCR · RAG (pgvector) · Playwright · FastAPI · PostgreSQL · uv
+
+## Quick start
+
+```bash
+uv sync
+uv run pytest -q
+```
+
+Full setup in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Project docs
 
 - [Vision (PDF)](docs/Rasd-vision.pdf)
 - [Specification](docs/spec.md)
 - [Roadmap: build rounds](docs/ROADMAP.md)
+- [Database design (ERD)](docs/erd.md)
+- [Project structure](docs/STRUCTURE.md)
 - [How we work](CONTRIBUTING.md)
 - [AI development log](docs/ai-dev-log.md)
 
